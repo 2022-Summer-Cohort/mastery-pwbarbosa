@@ -25,6 +25,10 @@ public class Post {
         this.content = content;
     }
 
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
     public Long getId() {
         return id;
     }
