@@ -1,6 +1,7 @@
 package com.survivingcodingbootcamp.blog.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Post {
@@ -12,6 +13,8 @@ public class Post {
     private Topic topic;
     @Lob
     private String content;
+    @ManyToMany(mappedBy = "posts")
+    private Collection<Hashtag> hashtags;
 
     protected Post() {
     }
