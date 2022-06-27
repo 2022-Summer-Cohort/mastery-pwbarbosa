@@ -16,8 +16,7 @@ public class Hashtag {
     @ManyToMany
     private Collection<Post> posts;
 
-    public Hashtag(long id, String name, Post... posts) {
-        this.id = id;
+    public Hashtag(String name, Post... posts) {
         this.name = name;
         this.posts = Arrays.asList(posts);
     }
