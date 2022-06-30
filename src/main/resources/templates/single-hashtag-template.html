@@ -16,7 +16,7 @@
     <h1 class="header__title">Surviving Coding Boot Camp</h1>
     <nav class="header__nav">
       <div class="header__nav-item"><a href="/" class="header__nav-link">Home</a></div>
-      <div class="header__nav-item"><a href="/all-hashtags-template.html" class="header__nav-link">Hashtags</a></div>
+      <div class="header__nav-item"><a href="/hashtags/" class="header__nav-link">Hashtags</a></div>
     </nav>
   </header>
   <main class="main-content">
@@ -26,7 +26,7 @@
       </h2>
       <nav class="main-content__nav posts__nav">
         <div th:each="post: ${hashtag.posts}">
-          <a th:text="${post.title}" th:href="'/posts/'+${post.id}" href="#"
+          <a th:text="${post.title}" th:href="'/posts/' + ${post.id}"
              class="posts__nav-link"></a>
         </div>
       </nav>

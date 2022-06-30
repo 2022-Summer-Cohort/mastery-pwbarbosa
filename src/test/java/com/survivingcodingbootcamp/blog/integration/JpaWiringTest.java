@@ -25,9 +25,9 @@ public class JpaWiringTest {
         Topic testTopic = new Topic("Name");
         topicRepo.save(testTopic);
 
-        Post testPost1 = new Post("Title", testTopic, "Content");
+        Post testPost1 = new Post("Title", testTopic, "Content", "Author1");
         postRepo.save(testPost1);
-        Post testPost2 = new Post("Another Title", testTopic, "Content");
+        Post testPost2 = new Post("Another Title", testTopic, "Content","Author 2");
         postRepo.save(testPost2);
 
         entityManager.flush();

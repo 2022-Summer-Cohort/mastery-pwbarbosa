@@ -13,12 +13,11 @@ public class Hashtag {
     @GeneratedValue
     private long id;
     private String name;
-    @ManyToMany
+    @ManyToMany(mappedBy = "hashtags")
     private Collection<Post> posts;
 
-    public Hashtag(String name, Post... posts) {
+    public Hashtag(String name) {
         this.name = name;
-        this.posts = Arrays.asList(posts);
     }
 
     public Hashtag() {

@@ -16,6 +16,11 @@
 .welcome{
     padding: 10px;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
 @media screen and (min-width:1000px){
     .container{
         width: 85%;

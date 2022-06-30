@@ -1,10 +1,15 @@
 package com.survivingcodingbootcamp.blog.controller;
 
+import com.survivingcodingbootcamp.blog.model.Hashtag;
 import com.survivingcodingbootcamp.blog.repository.HashtagRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/hashtags")
@@ -27,11 +32,9 @@ public class HashtagController {
         return "single-hashtag-template";
     }
 
-//    @RequestMapping("/{hashtag.name}")
-//    public String displayHashtagByNameIgnoreCase(Model model, @PathVariable String hashtagName) {
-//        model.addAttribute("hashtag", hashtagRepo.findByNameIgnoreCase(hashtagName).get());
-//        return "single-hashtag-template";
-//    }
-
-//    @PostMapping("/{}")
+    @RequestMapping("/name/{name}")
+    public String displayHashtagByNameIgnoreCase(Model model, @PathVariable String name) {
+        model.addAttribute("hashtag", hashtagRepo.findByNameIgnoreCase(name).get());
+        return "single-hashtag-template";
+    }
 }

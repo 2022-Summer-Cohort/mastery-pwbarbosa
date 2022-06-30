@@ -30,6 +30,17 @@
                        class="posts__nav-link"></a>
                 </div>
             </nav>
+            <br>
+            <br>
+            <form th:action="'/topics/' + ${topic.id} + '/addPost'" method="post">
+                <h2>Make a New Post:</h2>
+                <input placeholder="Title" type="text" name="title">
+                <input placeholder="Author" type="text" name="authorName">
+                <textarea placeholder="Post Content" name="content" rows="4" cols="50"></textarea>
+                <input placeholder="Hashtag (Optional)" type="text" name="hashtag">
+                <input type="submit" value="Submit"/>
+                <p>You can add more hashtags from your new posts page.</p>
+            </form>
         </section>
     </main>
 </div>

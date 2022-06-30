@@ -23,11 +23,27 @@
             <section class="main-content__post post">
                 <h3 class="post__topic-title main-content__topic-title"><a th:text="${post.topic.name}" th:href="'/topics/'+${post.topic.id}" class="main-content__topic-link post__topic-link">Topic</a>
                     </h3>
+                <br>
                 <h2 th:text="${post.title}" class="post__title main-content__topic-title">Post Title</h2>
+                <h3 th:text="'-' + ${post.authorName}">Post Author</h3>
+                <br>
                 <p th:text="${post.content}" class="post__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque blanditiis, aut quae fuga id quis ut. 
                     Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam illum.
                 </p>
+                <h3>Hashtags</h3>
+                <div th:each="hashtag: ${post.hashtags}">
+                    <a th:text="${hashtag.name}" th:href="'/hashtags/'+${hashtag.id}" href="#"
+                       class="posts__nav-link"></a>
+                </div>
             </section>
+            <hr>
+            <br>
+            <br>
+            <form th:action="'/posts/' + ${post.id}+ '/addHashtag'" method="post">
+                <label for="hashtagID">Enter Hashtag:</label>
+                <input type="text" name="hashtag" id="hashtagID">
+                <input type="submit">
+            </form>
         </main>
     </div>
 
