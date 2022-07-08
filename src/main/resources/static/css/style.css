@@ -13,10 +13,12 @@ h1{
     font-size: 40px;
 }
 h2{
-    color:var(--light-highlight)
+    color:var(--light-highlight);
+}
+h3{
+    color:var(--light-highlight);
 }
 .container{
-    background-color: var(--light-background);
 }
 html{
     font-family: 'Montserrat', sans-serif;
@@ -27,17 +29,28 @@ html{
 .header{
     background-color: var(--light-background);
     color: var(--light-highlight);
+    border-bottom: solid #52796f;
+    ;
 }
 .header__nav-link{
     font-size: 18px;
-    color: var(--dark-highlight);
+    color: var(--light-highlight);
+    text-decoration: none;
 }
 .header__nav-link:hover{
-    color: var(--light-highlight);
+    color: white;
+}
+.main-content {
+    background-color: var(--light-background);
+    border: solid #52796f;
+    border-radius: 10px;
+    padding: 15px;
+
 }
 
 a{
     color: var(--dark-highlight); 
+    text-decoration: none;
 }
 a:hover{
     color: var(--light-highlight);
