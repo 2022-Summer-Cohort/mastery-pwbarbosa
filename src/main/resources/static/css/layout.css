@@ -5,7 +5,16 @@
 }
 .header{
     padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.main-content {
+    width: 85%;
+    margin: 0 auto
+}
+
 .topics{
     padding: 10px;
 }
@@ -23,10 +32,10 @@ form {
 }
 @media screen and (min-width:1000px){
     .container{
-        width: 85%;
+        width: 100%;
         max-width: 1400px;
         min-width:1000px;
-        margin: 15px auto;
+        margin: 0px auto;
     }
 
 }
